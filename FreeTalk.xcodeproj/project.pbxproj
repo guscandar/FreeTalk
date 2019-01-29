@@ -12,9 +12,15 @@
 		39BCBCDB21FE87DE005D7BEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39BCBCD921FE87DE005D7BEF /* Main.storyboard */; };
 		39BCBCDD21FE87E0005D7BEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39BCBCDC21FE87E0005D7BEF /* Assets.xcassets */; };
 		39BCBCE021FE87E0005D7BEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39BCBCDE21FE87E0005D7BEF /* LaunchScreen.storyboard */; };
+		39BCBCE821FE892E005D7BEF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 39BCBCE721FE892E005D7BEF /* GoogleService-Info.plist */; };
+		39BCBCEA21FE8B2F005D7BEF /* RemoteConfigDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 39BCBCE921FE8B2F005D7BEF /* RemoteConfigDefaults.plist */; };
+		39BCBCEC21FE9391005D7BEF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BCBCEB21FE9391005D7BEF /* LoginViewController.swift */; };
+		39BCBCEE21FEB075005D7BEF /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BCBCED21FEB075005D7BEF /* SignupViewController.swift */; };
+		EE6B5BE9DE62511CC4E4F2C7 /* Pods_FreeTalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64A61F94A12E09E107A9AA22 /* Pods_FreeTalk.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		031DA5186600035B6555BF99 /* Pods-FreeTalk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FreeTalk.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FreeTalk/Pods-FreeTalk.debug.xcconfig"; sourceTree = "<group>"; };
 		39BCBCD221FE87DE005D7BEF /* FreeTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreeTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39BCBCD521FE87DE005D7BEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		39BCBCD721FE87DE005D7BEF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +28,13 @@
 		39BCBCDC21FE87E0005D7BEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		39BCBCDF21FE87E0005D7BEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		39BCBCE121FE87E0005D7BEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39BCBCE721FE892E005D7BEF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		39BCBCE921FE8B2F005D7BEF /* RemoteConfigDefaults.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = RemoteConfigDefaults.plist; sourceTree = "<group>"; };
+		39BCBCEB21FE9391005D7BEF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		39BCBCED21FEB075005D7BEF /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		39BCBCEF21FEC845005D7BEF /* FreeTalk.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FreeTalk.entitlements; sourceTree = "<group>"; };
+		64A61F94A12E09E107A9AA22 /* Pods_FreeTalk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FreeTalk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		828817592357B3F759B47EDF /* Pods-FreeTalk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FreeTalk.release.xcconfig"; path = "Pods/Target Support Files/Pods-FreeTalk/Pods-FreeTalk.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE6B5BE9DE62511CC4E4F2C7 /* Pods_FreeTalk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +54,8 @@
 			children = (
 				39BCBCD421FE87DE005D7BEF /* FreeTalk */,
 				39BCBCD321FE87DE005D7BEF /* Products */,
+				6FEBFD04F242BEF42E49CCFB /* Pods */,
+				418485204F0C11D7C9061AD6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +70,36 @@
 		39BCBCD421FE87DE005D7BEF /* FreeTalk */ = {
 			isa = PBXGroup;
 			children = (
+				39BCBCEF21FEC845005D7BEF /* FreeTalk.entitlements */,
 				39BCBCD521FE87DE005D7BEF /* AppDelegate.swift */,
 				39BCBCD721FE87DE005D7BEF /* ViewController.swift */,
+				39BCBCE921FE8B2F005D7BEF /* RemoteConfigDefaults.plist */,
 				39BCBCD921FE87DE005D7BEF /* Main.storyboard */,
+				39BCBCEB21FE9391005D7BEF /* LoginViewController.swift */,
 				39BCBCDC21FE87E0005D7BEF /* Assets.xcassets */,
 				39BCBCDE21FE87E0005D7BEF /* LaunchScreen.storyboard */,
 				39BCBCE121FE87E0005D7BEF /* Info.plist */,
+				39BCBCE721FE892E005D7BEF /* GoogleService-Info.plist */,
+				39BCBCED21FEB075005D7BEF /* SignupViewController.swift */,
 			);
 			path = FreeTalk;
+			sourceTree = "<group>";
+		};
+		418485204F0C11D7C9061AD6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				64A61F94A12E09E107A9AA22 /* Pods_FreeTalk.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6FEBFD04F242BEF42E49CCFB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				031DA5186600035B6555BF99 /* Pods-FreeTalk.debug.xcconfig */,
+				828817592357B3F759B47EDF /* Pods-FreeTalk.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +109,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 39BCBCE421FE87E0005D7BEF /* Build configuration list for PBXNativeTarget "FreeTalk" */;
 			buildPhases = (
+				6E3910B0AC925EE0AD71C176 /* [CP] Check Pods Manifest.lock */,
 				39BCBCCE21FE87DE005D7BEF /* Sources */,
 				39BCBCCF21FE87DE005D7BEF /* Frameworks */,
 				39BCBCD021FE87DE005D7BEF /* Resources */,
+				4EBCC38E5228800DD8B3C00B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -96,6 +136,11 @@
 				TargetAttributes = {
 					39BCBCD121FE87DE005D7BEF = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -123,6 +168,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				39BCBCE021FE87E0005D7BEF /* LaunchScreen.storyboard in Resources */,
+				39BCBCEA21FE8B2F005D7BEF /* RemoteConfigDefaults.plist in Resources */,
+				39BCBCE821FE892E005D7BEF /* GoogleService-Info.plist in Resources */,
 				39BCBCDD21FE87E0005D7BEF /* Assets.xcassets in Resources */,
 				39BCBCDB21FE87DE005D7BEF /* Main.storyboard in Resources */,
 			);
@@ -130,12 +177,73 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4EBCC38E5228800DD8B3C00B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FreeTalk/Pods-FreeTalk-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/TextFieldEffects/TextFieldEffects.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TextFieldEffects.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FreeTalk/Pods-FreeTalk-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6E3910B0AC925EE0AD71C176 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FreeTalk-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		39BCBCCE21FE87DE005D7BEF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39BCBCEC21FE9391005D7BEF /* LoginViewController.swift in Sources */,
 				39BCBCD821FE87DE005D7BEF /* ViewController.swift in Sources */,
+				39BCBCEE21FEB075005D7BEF /* SignupViewController.swift in Sources */,
 				39BCBCD621FE87DE005D7BEF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,8 +388,10 @@
 		};
 		39BCBCE521FE87E0005D7BEF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 031DA5186600035B6555BF99 /* Pods-FreeTalk.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FreeTalk/FreeTalk.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P3HDM9Z8PQ;
 				INFOPLIST_FILE = FreeTalk/Info.plist;
@@ -298,8 +408,10 @@
 		};
 		39BCBCE621FE87E0005D7BEF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 828817592357B3F759B47EDF /* Pods-FreeTalk.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FreeTalk/FreeTalk.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P3HDM9Z8PQ;
 				INFOPLIST_FILE = FreeTalk/Info.plist;
