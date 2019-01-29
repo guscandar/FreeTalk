@@ -10,13 +10,14 @@ import UIKit
 import SnapKit
 import Firebase
 
-class SignupViewController: UIViewController {
+class SignupViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var signupButton: UIButton!
     @IBOutlet weak var cancelButton: UIButton!
     
+    @IBOutlet weak var imageView: UIImageView!
     let remoteconfig = RemoteConfig.remoteConfig()
     var color : String!
     
@@ -32,6 +33,10 @@ class SignupViewController: UIViewController {
         }
         color = remoteconfig["splash_background"].stringValue
         statusBar.backgroundColor = UIColor(hex: color)
+        
+        imageView.isUserInteractionEnabled = true
+        imageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(imagePicker)))
+        
         signupButton.backgroundColor = UIColor(hex: color)
         cancelButton.backgroundColor = UIColor(hex: color)
         
@@ -39,11 +44,26 @@ class SignupViewController: UIViewController {
         cancelButton.addTarget(self, action: #selector(cancelEvent), for: .touchUpInside)
     }
     
+    @objc func imagePicker() {
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.allowsEditing = true
+        imagePicker.sourceType = UIImagePickerController.SourceType.photoLibrary
+        
+        self.present(imagePicker, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        imageView.image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
+        dismiss(animated: true, completion: nil)
+    }
+    
     @objc func signupEvent() {
         print("email.text = \(email.text), password.text = \(password.text)")
         Auth.auth().createUser(withEmail: email.text!, password: password.text!) { (authResult, err) in
             let user = authResult?.user
             let uid = user?.uid
+        ß
             Database.database().reference().child("users").child(uid!).setValue(["name":self.name.text!])
             
         }
