@@ -9,6 +9,7 @@
 import UIKit
 import SnapKit
 import Firebase
+import FirebaseStorage
 
 class SignupViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     @IBOutlet weak var email: UITextField!
@@ -63,8 +64,16 @@ class SignupViewController: UIViewController, UINavigationControllerDelegate, UI
         Auth.auth().createUser(withEmail: email.text!, password: password.text!) { (authResult, err) in
             let user = authResult?.user
             let uid = user?.uid
-        ß
-            Database.database().reference().child("users").child(uid!).setValue(["name":self.name.text!])
+            let image = self.imageView.image!.jpegData(compressionQuality: 0.1)
+            let imageRef = Storage.storage().reference().child("userImage")
+            var imageURL : String?
+            
+            Storage.storage().reference().child("userImages").child(uid!).putData(image!, metadata: nil, completion: { (data, error) in
+                    imageRef.downloadURL(completion: { (url, error) in
+                    imageURL = url?.absoluteString
+                })
+            })
+            Database.database().reference().child("users").child(uid!).setValue(["user":self.name.text!, "profileImageUrl":imageURL])
             
         }
     }
