@@ -60,21 +60,22 @@ class SignupViewController: UIViewController, UINavigationControllerDelegate, UI
     }
     
     @objc func signupEvent() {
-        print("email.text = \(email.text), password.text = \(password.text)")
+//        print("email.text = \(email.text), password.text = \(password.text)")
         Auth.auth().createUser(withEmail: email.text!, password: password.text!) { (authResult, err) in
             let user = authResult?.user
             let uid = user?.uid
             let image = self.imageView.image!.jpegData(compressionQuality: 0.1)
-            let imageRef = Storage.storage().reference().child("userImage")
+            let imageRef = Storage.storage().reference().child("userImages")
             var imageURL : String?
             
             Storage.storage().reference().child("userImages").child(uid!).putData(image!, metadata: nil, completion: { (data, error) in
                     imageRef.downloadURL(completion: { (url, error) in
+//                    print("url = \(url), error = \(error)")
                     imageURL = url?.absoluteString
                 })
             })
-            Database.database().reference().child("users").child(uid!).setValue(["user":self.name.text!, "profileImageUrl":imageURL])
-            
+            print("imageURL = \(imageURL)")
+            Database.database().reference().child("users").child(uid!).setValue(["username":self.name.text!, "profileImageUrl":imageURL])
         }
     }
 

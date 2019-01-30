@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		39B04C2822013A99003FB230 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B04C2722013A99003FB230 /* PeopleViewController.swift */; };
+		39B04C2A220159A3003FB230 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B04C29220159A3003FB230 /* UserModel.swift */; };
 		39BCBCD621FE87DE005D7BEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BCBCD521FE87DE005D7BEF /* AppDelegate.swift */; };
 		39BCBCD821FE87DE005D7BEF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BCBCD721FE87DE005D7BEF /* ViewController.swift */; };
 		39BCBCDB21FE87DE005D7BEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39BCBCD921FE87DE005D7BEF /* Main.storyboard */; };
@@ -21,6 +23,8 @@
 
 /* Begin PBXFileReference section */
 		031DA5186600035B6555BF99 /* Pods-FreeTalk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FreeTalk.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FreeTalk/Pods-FreeTalk.debug.xcconfig"; sourceTree = "<group>"; };
+		39B04C2722013A99003FB230 /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
+		39B04C29220159A3003FB230 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		39BCBCD221FE87DE005D7BEF /* FreeTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreeTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39BCBCD521FE87DE005D7BEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		39BCBCD721FE87DE005D7BEF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +85,8 @@
 				39BCBCE121FE87E0005D7BEF /* Info.plist */,
 				39BCBCE721FE892E005D7BEF /* GoogleService-Info.plist */,
 				39BCBCED21FEB075005D7BEF /* SignupViewController.swift */,
+				39B04C2722013A99003FB230 /* PeopleViewController.swift */,
+				39B04C29220159A3003FB230 /* UserModel.swift */,
 			);
 			path = FreeTalk;
 			sourceTree = "<group>";
@@ -245,6 +251,8 @@
 				39BCBCD821FE87DE005D7BEF /* ViewController.swift in Sources */,
 				39BCBCEE21FEB075005D7BEF /* SignupViewController.swift in Sources */,
 				39BCBCD621FE87DE005D7BEF /* AppDelegate.swift in Sources */,
+				39B04C2A220159A3003FB230 /* UserModel.swift in Sources */,
+				39B04C2822013A99003FB230 /* PeopleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
