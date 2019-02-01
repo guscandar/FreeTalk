@@ -11,5 +11,5 @@ import UIKit
 @objcMembers
 class UserModel: NSObject {
     var profileImageUrl :String?
-    var username :String?
+    var userName :String?
 }

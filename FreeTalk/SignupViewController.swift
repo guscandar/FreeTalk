@@ -60,22 +60,17 @@ class SignupViewController: UIViewController, UINavigationControllerDelegate, UI
     }
     
     @objc func signupEvent() {
-//        print("email.text = \(email.text), password.text = \(password.text)")
         Auth.auth().createUser(withEmail: email.text!, password: password.text!) { (authResult, err) in
-            let user = authResult?.user
-            let uid = user?.uid
-            let image = self.imageView.image!.jpegData(compressionQuality: 0.1)
-            let imageRef = Storage.storage().reference().child("userImages")
-            var imageURL : String?
-            
-            Storage.storage().reference().child("userImages").child(uid!).putData(image!, metadata: nil, completion: { (data, error) in
-                    imageRef.downloadURL(completion: { (url, error) in
-//                    print("url = \(url), error = \(error)")
-                    imageURL = url?.absoluteString
-                })
-            })
-            print("imageURL = \(imageURL)")
-            Database.database().reference().child("users").child(uid!).setValue(["username":self.name.text!, "profileImageUrl":imageURL])
+            let uid = authResult?.user.uid
+            let image = self.imageView.image?.jpegData(compressionQuality: 0.05)
+            let storageRef = Storage.storage().reference().child("userImages").child(uid!)
+            storageRef.putData(image!, metadata: nil) { (metadata, error) in
+                if let error = error {
+                    print("Error uploading: \(error)")
+                    return
+                }
+                self.uploadSuccess(uid!, storageRef)
+            }
         }
     }
 
@@ -92,4 +87,24 @@ class SignupViewController: UIViewController, UINavigationControllerDelegate, UI
     }
     */
 
+    func uploadSuccess(_ uid: String, _ storageRef: StorageReference) {
+        print("Upload Succeeded!")
+        var imageUrl : String?
+        imageUrl = "init imageUrl"
+        storageRef.downloadURL { (url, error) in
+            if let error = error {
+                print("Error getting download URL: \(error)")
+                imageUrl = "error"
+                return
+            }
+            imageUrl = url?.absoluteString ?? "no url"
+            print("imageUrl = \(imageUrl ?? "is nil")")
+            let values = ["userName":self.name.text!, "profileImageUrl":imageUrl]
+            Database.database().reference().child("users").child(uid).setValue(values) { (error, ref) in
+                if (error == nil) {
+                    self.cancelEvent()
+                }
+            }            
+        }
+    }
 }

@@ -64,7 +64,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
                                         <color key="value" red="1" green="0.1126095609" blue="0.1881960446" alpha="1" colorSpace="calibratedRGB"/>
@@ -128,7 +128,7 @@
             </objects>
             <point key="canvasLocation" x="972" y="102.99850074962519"/>
         </scene>
-        <!--People-->
+        <!--People View Controller-->
         <scene sceneID="g8h-Yk-oib">
             <objects>
                 <viewController storyboardIdentifier="MainViewController" id="Av1-sL-G5x" customClass="PeopleViewController" customModule="FreeTalk" customModuleProvider="target" sceneMemberID="viewController">
@@ -138,11 +138,26 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="5Ql-PW-gcQ"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="People" image="ic_people" id="ZDP-vC-n6Y"/>
+                    <navigationItem key="navigationItem" id="Awa-ke-BTT"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="heQ-cA-Dxm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2407" y="99"/>
+            <point key="canvasLocation" x="3305" y="43"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="lNE-d4-bqQ">
+            <objects>
+                <viewController storyboardIdentifier="ChatViewController" id="tMw-u3-QLD" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4IJ-yw-vFF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="5QS-SI-db7"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VP7-D2-6s3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4026" y="41"/>
         </scene>
         <!--Account-->
         <scene sceneID="mPn-VJ-8DN">
@@ -174,7 +189,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mTe-m6-aed" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3105" y="534"/>
+            <point key="canvasLocation" x="3305" y="791"/>
         </scene>
         <!--Signup View Controller-->
         <scene sceneID="ctR-ep-A57">
@@ -306,11 +321,12 @@
                 <tabBarController storyboardIdentifier="MainViewTabBarController" automaticallyAdjustsScrollViewInsets="NO" id="SNo-ng-1Ha" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0Us-hw-CwM">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Av1-sL-G5x" kind="relationship" relationship="viewControllers" id="zec-rt-whJ"/>
+                        <segue destination="ngi-wL-Rv8" kind="relationship" relationship="viewControllers" id="zec-rt-whJ"/>
                         <segue destination="TDm-YM-zWl" kind="relationship" relationship="viewControllers" id="MHe-LF-bVa"/>
                         <segue destination="1Yq-zt-cTQ" kind="relationship" relationship="viewControllers" id="63J-Pr-Ll9"/>
                     </connections>
@@ -318,6 +334,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jKJ-mD-Qoa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1682.4000000000001" y="98.50074962518741"/>
+        </scene>
+        <!--People-->
+        <scene sceneID="Jkh-68-ylZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ngi-wL-Rv8" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="People" image="ic_people" id="ZDP-vC-n6Y"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VA3-gm-GCW">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Av1-sL-G5x" kind="relationship" relationship="rootViewController" id="oo8-KU-Fiz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0t3-dL-74i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2567" y="52"/>
         </scene>
     </scenes>
     <resources>
